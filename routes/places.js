@@ -1,7 +1,6 @@
 const passport = require('passport');
 const express = require('express');
 const router = express.Router();
-const key = 'Bearer O92IUSj8sUA9BMPyQECyv9hbS1CKNw4WsUF2sspFbcAeQoksRe-tq2yHuKcyccF6h6wVWDP5NujbrwVyrsswF9kVwaRYR1ojKXTm5IbSIkBxjYvKGAvu6Fz_NKwFW3Yx';
 const Place = require('../models/place');
 const User = require('../models/user');
 const { addPlaces, yelpAPI } = require('../helper');
