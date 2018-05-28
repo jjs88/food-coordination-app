@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 //get the users model instance
 const User = mongoose.model('user');
 
-
 passport.serializeUser((user, done) => {
   // console.log('serialize THE USER')
   //stuffs into the cookie/session
@@ -32,13 +31,10 @@ passport.use(new GoogleStrategy({
     //info back from google to create a new user on our db
     const existingUser = await User.findOne({googleId: profile.id})
 
-    console.log('GOOGLE', profile);
-
     if(!existingUser) {
       const newUser = await new User({googleId: profile.id, displayName: profile.displayName}).save();
       return done(null, newUser);
     }
-
     done(null, existingUser);
   }
 ));

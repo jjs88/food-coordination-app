@@ -10,6 +10,7 @@ class CityForm extends Component {
     e.preventDefault();
     if(!this.props.auth && !this.state.city) return;
     // console.log('get places');
+    e.target.reset();
     this.props.getPlaces(this.state.city);
 
   }
@@ -19,8 +20,8 @@ class CityForm extends Component {
   render() {
     return (
       <form className="CityForm" onSubmit={this.onSubmit}>
-        <input type="text" placeholder="what city?" onChange={(e) => this.setState({city: e.target.value})}/>
-        <button type="submit">go</button>
+        <input className="CityForm__input" type="text" placeholder="what city?" onChange={(e) => this.setState({city: e.target.value})}/>
+        <button className="CityForm__btn" type="submit">go</button>
       </form>
     )
   }

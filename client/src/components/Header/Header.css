@@ -1,0 +1,16 @@
+.Header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.Header__link {
+}
+
+.Header__link:visited {
+  color: yellow;
+}
+
+.Header__link:link {
+  color: yellow;
+}

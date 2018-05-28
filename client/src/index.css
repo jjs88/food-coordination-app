@@ -1,6 +1,8 @@
 @import './containers/Layout/Layout.css';
 @import './containers/Places/Places.css';
 @import './components/Place/Place.css';
+@import './components/CityForm/CityForm.css';
+@import './components/Header/Header.css';
 
 body {
   background-color: #661920;
